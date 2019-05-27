@@ -1,0 +1,5 @@
+FROM php:7.3-cli-alpine
+COPY progpilot_dev20181222-233251.phar /progpilot/
+RUN chmod+x /progpilot/progpilot_dev20181222-233251.phar
+RUN mkdir -p /opt/mount/
+ENTRYPOINT [ "php", "/progpilot/progpilot_dev20181222-233251.phar", "/opt/mount/"]
